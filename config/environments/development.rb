@@ -46,6 +46,9 @@ Rails.application.configure do
 
   config.cache_store = :dalli_store
 
+  config.i18n.default_locale = :es
+  config.i18n.available_locales = [:en, :es, :fr, :nl, 'pt-BR']
+
   config.after_initialize do
     Bullet.enable = true
     Bullet.bullet_logger = true
