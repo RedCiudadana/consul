@@ -29,7 +29,14 @@ header {
   }
 }
 
+.logo {
+  color: #52bae6;
+}
+
 .top-bar {
+  // Celeste texto
+  color: #27a9e0;
+
   .top-bar-title a {
     img {
       @include breakpoint(medium) {
@@ -38,6 +45,22 @@ header {
         margin-left: 0.25rem;
         width: auto;
       }
+    }
+  }
+
+  .menu > li {
+    a {
+      color: #52bae6;
+    }
+  }
+
+  .menu-icon.dark {
+    height: 20px;
+
+    &::after,
+    &:hover::after {
+      background: #52bae6;
+      box-shadow: 0 7px 0 #52bae6, 0 14px 0 #52bae6;
     }
   }
 }
