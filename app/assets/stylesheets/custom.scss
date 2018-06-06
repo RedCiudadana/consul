@@ -4,6 +4,10 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 
+// Celeste texto
+$celesteTexto: #27a9e0;
+$celesteTextoSuave: #222;
+
 .top-links {
   background: #52bae6;
 }
@@ -34,21 +38,25 @@ header {
 }
 
 .top-bar {
-  // Celeste texto
-  color: #27a9e0;
+  color: $celesteTexto;
 
   .top-bar-title a {
     img {
       @include breakpoint(medium) {
-        height: 80px;
-        margin-top: 1.0rem;
-        margin-left: 0.25rem;
+        height: $line-height * 2.75;
         width: auto;
+        vertical-align: bottom;
+        padding-left: rem-calc(15);
       }
     }
   }
 
   .menu > li {
+    @include breakpoint(medium) {
+      display: table-cell;
+      height: $line-height * 4.0;
+    }
+
     a {
       color: #52bae6;
     }
@@ -63,4 +71,8 @@ header {
       box-shadow: 0 7px 0 #52bae6, 0 14px 0 #52bae6;
     }
   }
+}
+
+.highlight {
+  background: #fff;
 }
