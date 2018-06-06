@@ -14,3 +14,30 @@
   font-weight: 300;
   src: font-url('roboto-regular.ttf') format('truetype'),;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: font-url('roboto-bold.ttf') format('truetype'),;
+}
+
+header {
+  background: #ffffff;
+  .top-bar {
+    background: #ffffff !important;
+  }
+}
+
+.top-bar {
+  .top-bar-title a {
+    img {
+      @include breakpoint(medium) {
+        height: 80px;
+        margin-top: 1.0rem;
+        margin-left: 0.25rem;
+        width: auto;
+      }
+    }
+  }
+}

@@ -22,13 +22,13 @@
       <div id="responsive_menu">
         <div class="top-bar-title">
           <%= link_to root_path, class: "hide-for-small-only", accesskey: "0" do %>
-            <%= image_tag(image_path_for('logo_header.png'), class: 'hide-for-small-only float-left', size: '80x80', alt: t("layouts.header.logo")) %>
-            <%= setting['org_name'] %>
+            <%= image_tag(image_path_for('logo_header.png'), class: 'hide-for-small-only float-left', alt: t("layouts.header.logo")) %>
           <% end %>
         </div>
 
         <div class="top-bar-right">
           <ul class="menu" data-responsive-menu="medium-dropdown">
+            <%= render "shared/subnavigation" %>
             <%= render "shared/admin_login_items" %>
             <%= render "layouts/notification_item" %>
             <%= render "devise/menu/login_items" %>
