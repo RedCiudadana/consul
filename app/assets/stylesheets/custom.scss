@@ -6,7 +6,7 @@
 
 // Celeste texto
 $celesteTexto: #27a9e0;
-$celesteTextoSuave: #222;
+$celesteTextoSuave: #52bae6;
 
 .top-links {
   background: #52bae6;
@@ -26,15 +26,26 @@ $celesteTextoSuave: #222;
   src: font-url('roboto-bold.ttf') format('truetype'),;
 }
 
-header {
-  background: #ffffff;
-  .top-bar {
-    background: #ffffff !important;
-  }
-}
+
 
 .logo {
   color: #52bae6;
+}
+
+.highlight {
+  background: #fff;
+}
+
+// 02. Header
+// ----------
+
+header {
+  background: #ffffff;
+  margin-bottom: 0px;
+
+  .top-bar {
+    background: #ffffff !important;
+  }
 }
 
 .top-bar {
@@ -73,6 +84,78 @@ header {
   }
 }
 
-.highlight {
-  background: #fff;
+// Hero slider
+// Taken from: https://foundation.zurb.com/building-blocks/blocks/clean-hero-slider.html
+.clean-hero-slider {
+  .orbit-caption {
+    width: auto;
+    height: auto;
+    background: none;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    padding: 0.2rem 2rem;
+
+    @include breakpoint(medium) {
+      // @include vertical-center;
+      text-align: left;
+      width: 43%;
+      right: 0;
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint(xlarge) {
+      padding-right: 10%;
+    }
+
+    @include breakpoint(xxlarge) {
+      padding-right: 20%;
+    }
+
+    h3 {
+      color: $celesteTexto;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      @include breakpoint(medium) {
+        font-size: 2.0rem;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.50;
+      color: $celesteTextoSuave;
+    }
+
+    .button {
+      background: $celesteTexto;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      padding: 0.85em 1.50em;
+    }
+  }
+
+  .orbit-slide {
+    padding-bottom: 40%;
+    background: $black;
+
+    @include breakpoint(medium) {
+      padding-bottom: 0;
+    }
+
+    img {
+      image-rendering: auto;
+    }
+  }
+
+  ul.orbit-container {
+    height: auto !important;
+  }
+
+  li.orbit-slide {
+    max-height: none !important;
+  }
 }
