@@ -105,13 +105,11 @@ header {
       padding: 1rem 2rem;
     }
 
-    @include breakpoint(xlarge) {
-      padding-right: 10%;
-    }
-
-    @include breakpoint(xxlarge) {
-      padding-right: 20%;
-    }
+    // Verificar en qué punto podemos disparar el breakpoint xlarge
+    // @include breakpoint(xlarge) {
+    //   @include vertical-center;
+    //   padding-left: 15%;
+    // }
 
     h3 {
       color: $celesteTexto;
@@ -140,7 +138,6 @@ header {
 
   .orbit-slide {
     padding-bottom: 40%;
-    background: $black;
 
     @include breakpoint(medium) {
       padding-bottom: 0;
