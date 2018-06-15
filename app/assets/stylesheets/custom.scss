@@ -26,8 +26,6 @@ $celesteTextoSuave: #52bae6;
   src: font-url('roboto-bold.ttf') format('truetype'),;
 }
 
-
-
 .logo {
   color: #52bae6;
 }
@@ -137,7 +135,7 @@ header {
   }
 
   .orbit-slide {
-    padding-bottom: 80%;
+    padding-bottom: 75%;
 
     @include breakpoint(medium) {
       padding-bottom: 0;
@@ -154,5 +152,41 @@ header {
 
   li.orbit-slide {
     max-height: none !important;
+  }
+}
+
+.main {
+  background-color: $celesteTextoSuave;
+  color: #fff;
+
+  img {
+    max-height: 80px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 15%;
+
+    @include breakpoint(medium) {
+      padding: 0;
+    }
+  }
+
+  .column:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  @include breakpoint(medium) {
+    .column:not(:first-child) {
+      margin-top: 0px;
+    }
   }
 }
