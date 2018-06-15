@@ -7,9 +7,11 @@
 // Celeste texto
 $celesteTexto: #27a9e0;
 $celesteTextoSuave: #52bae6;
+$celesteFuerte: #1e82c6;
+$celesteFooterP: #7dcbec;
 
 .top-links {
-  background: #52bae6;
+  background: $celesteFuerte;
 }
 
 @font-face {
@@ -166,8 +168,8 @@ header {
   h2 {
     font-size: 22px;
     font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-bottom: 5px;
   }
 
   p {
@@ -189,4 +191,44 @@ header {
       margin-top: 0px;
     }
   }
+}
+
+.footer,
+.push {
+  min-height: $line-height * 10;
+}
+
+.footer {
+  border-top: 6px solid $celesteFuerte;
+  background: #fff;
+
+  @include breakpoint(medium) {
+    .footer-sections {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    color: $celesteTexto;
+    font-size: 20px;
+  }
+
+  p {
+    margin-top: 5px;
+    color: $celesteFooterP;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  a,
+  a:active,
+  a:focus {
+    color: $celesteFooterP;
+  }
+}
+
+.subfooter {
+  border-top: 1px solid $celesteTextoSuave;
 }
